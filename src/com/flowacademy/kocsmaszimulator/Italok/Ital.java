@@ -1,4 +1,4 @@
-package com.flowacademy.kocsmaszimulator;
+package com.flowacademy.kocsmaszimulator.Italok;
 
 public class Ital {
     private String nev;

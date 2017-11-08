@@ -1,4 +1,6 @@
-package com.flowacademy.kocsmaszimulator;
+package com.flowacademy.kocsmaszimulator.Emberek;
+
+import com.flowacademy.kocsmaszimulator.Italok.Ital;
 
 public class Ember {
     private String nev;
@@ -10,13 +12,13 @@ public class Ember {
     private static int Darab = 0;
     public static final int MAX_RESZEGSEG = 50;
 
-    public Ember(String nev, int kor, boolean nem, int penz, int reszegseg, boolean kocsmabanVan) {
+    public Ember(String nev, int kor, boolean nem, int penz) {
         this.nev = nev;
         this.kor = kor;
         this.nem = nem;
         this.penz = penz;
-        this.reszegseg = reszegseg;
-        this.isInKocsma = kocsmabanVan;
+        this.reszegseg = 0;
+        this.isInKocsma = false;
         this.Darab ++;
     }
 
@@ -61,6 +63,21 @@ public class Ember {
         this.isInKocsma = true;
         System.out.println(this.nev + " megérkezett a kocsmába.");
     }
+
+    public void kotozkodik(Ember ember) {
+        if (Kidobo.getAktivKidobok() > 0) {
+            this.hazamegy();
+            return;
+        }
+        System.out.println(this.nev + "Jót kötözködött.");
+    }
+
+
+
+
+
+
+
 
     public static int getDarab() {
         return Darab;
