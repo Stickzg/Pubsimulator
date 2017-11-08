@@ -53,9 +53,9 @@ public class Main {
                 10, 0, false, 8);
 
         Kidobo bela = new Kidobo("Béla", 40, true,
-                5, 0, true);
+                5);
         Kidobo tibi = new Kidobo("Tibi", 35, true,
-                20, 0, true);
+                20);
 
 
         for (int i = 0; i < emberek.length; i++) {
